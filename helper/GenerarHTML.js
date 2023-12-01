@@ -8,7 +8,7 @@ export function generarHTML(usuarios) {
         <td class="username-usuario">${usuario.username}</td>
         <td class="email-usuario">${usuario.email}</td>
         <td class="avatar-usuario"><img src="${usuario.avatar}" alt="imagen-usuario"/></td>
-        <td><a href="#/agregar-usuario" class="text-light" ><button class="btn btn-primary mx-2 boton-editar">Editar</button></a><button class="btn btn-danger">Eliminar</button></td>
+        <td><a href="#/agregar-usuario" class="text-light" ><button class="btn btn-primary mx-2 boton-editar">Editar</button></a><button class="btn btn-danger" data-id="${usuario.id}" id="delete-user">Eliminar</button></td>
         </tr>`
         $tbody.insertAdjacentHTML("beforeend", usuarioHTML)
     });

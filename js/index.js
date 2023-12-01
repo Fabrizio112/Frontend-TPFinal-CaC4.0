@@ -34,12 +34,19 @@ document.addEventListener("click", (e) => {
         let $form = $main.querySelector("form")
         let $titulo = $form.querySelector("h2")
         let $boton = $form.querySelector("button")
+        $boton.dataset.id = ""
         $titulo.innerText = "Añadir Usuario"
         $boton.innerText = "Crear"
         $form.nombre.value = ""
         $form.user.value = ""
         $form.email.value = ""
         $form.avatar.value = ""
+    } else if (e.target.id === "delete-user") {
+        let respuestaUsuario = confirm("Estas seguro de Borrar a este usuario?")
+        if (respuestaUsuario) {
+            let idUsuarioABorrar = e.target.dataset.id
+            instanciaVue.deleteUser(idUsuarioABorrar)
+        }
     }
 
 })
@@ -50,18 +57,16 @@ document.addEventListener("submit", (e) => {
         if ($form.nombre.value && $form.user.value && $form.email.value && $form.avatar.value) {
             if ($button.dataset.id) {
                 let usuario = {
-                    idSeleccionado: $button.dataset.id,
-                    nombre: $form.nombre.value,
-                    usuario: $form.user.value,
+                    name: $form.nombre.value,
+                    username: $form.user.value,
                     email: $form.email.value,
                     avatar: $form.avatar.value
                 }
-                instanciaVue.editUser(usuario)
-                window.location.reload()
+                instanciaVue.editUser(usuario, $button.dataset.id)
             } else {
                 let usuario = {
-                    nombre: $form.nombre.value,
-                    usuario: $form.user.value,
+                    name: $form.nombre.value,
+                    username: $form.user.value,
                     email: $form.email.value,
                     avatar: $form.avatar.value
                 }

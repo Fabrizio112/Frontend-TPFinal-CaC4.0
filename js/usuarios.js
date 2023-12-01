@@ -2,8 +2,8 @@ import { generarHTML } from "../helper/GenerarHTML.js"
 
 const initialUserForm = {
     idSeleccionado: "",
-    nombre: "",
-    usuario: "",
+    name: "",
+    username: "",
     email: "",
     avatar: ""
 }
@@ -43,6 +43,7 @@ const App = Vue.createApp({
                 .then(res => res.json())
                 .then(data => {
                     alert("Usuario Creado")
+                    window.location.href = "index.html"
                 })
                 .catch(error => {
                     console.error(error)
@@ -62,17 +63,18 @@ const App = Vue.createApp({
                 .catch(error => {
                     console.error(error)
                 })
-        }, editUser(usuario) {
+        }, editUser(usuario, id) {
             let options = {
                 body: JSON.stringify(usuario),
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'
             }
-            fetch(this.url + `/${usuario.idSeleccionado}`, options)
+            fetch(this.url + `/${id}`, options)
                 .then(res => res.json())
                 .then(data => {
                     alert("Usuario Editado con Exito")
+                    window.location.href = "index.html"
                 })
                 .catch(error => {
                     console.error(error)

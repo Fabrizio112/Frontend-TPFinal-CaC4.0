@@ -1,4 +1,6 @@
 export function TablaDeUsuarios() {
+    let $div = document.createElement("div")
+    $div.classList.add("table-responsive")
     let $table = document.createElement("table")
     $table.classList.add("table", "align-middle", "table-dark")
     $table.id = "tabla-usuarios"
@@ -24,6 +26,7 @@ export function TablaDeUsuarios() {
     $tr.appendChild($Acciones)
     $thead.appendChild($tr)
     $table.appendChild($thead)
+    $div.appendChild($table)
 
-    return $table
+    return $div
 }

@@ -4,7 +4,8 @@ body {
 }
 
 main {
-    min-height: 100vh;
+    min-height: 70vh;
+    padding: 0 3rem;
 }
 
 footer {
@@ -45,4 +46,18 @@ p {
 
 .boton-editar a {
     text-decoration: none !important;
+}
+
+
+
+@media (max-width:768px) {
+    main {
+        padding: 0 1rem !important;
+
+    }
+
+    .boton-editar {
+        margin: 0 !important;
+        width: 100%;
+    }
 }
