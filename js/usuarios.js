@@ -43,7 +43,7 @@ const App = Vue.createApp({
                 .then(res => res.json())
                 .then(data => {
                     alert("Usuario Creado")
-                    window.location.href = "index.html"
+                    window.location.href = "/"
                 })
                 .catch(error => {
                     console.error(error)
@@ -74,7 +74,7 @@ const App = Vue.createApp({
                 .then(res => res.json())
                 .then(data => {
                     alert("Usuario Editado con Exito")
-                    window.location.href = "index.html"
+                    window.location.href = "/"
                 })
                 .catch(error => {
                     console.error(error)
