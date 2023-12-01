@@ -72,7 +72,6 @@ document.addEventListener("submit", (e) => {
                     avatar: $form.avatar.value
                 }
                 instanciaVue.addUser(usuario)
-                window.location.reload()
             }
 
         }
