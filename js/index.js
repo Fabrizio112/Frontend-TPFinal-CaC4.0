@@ -51,6 +51,7 @@ document.addEventListener("click", (e) => {
 
 })
 document.addEventListener("submit", (e) => {
+    e.preventDefault()
     if (e.target.id === "form-users") {
         let $form = e.target
         let $button = $form.querySelector("button")
