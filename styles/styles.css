@@ -1,0 +1,48 @@
+body {
+    background-color: #242424;
+    color: white;
+}
+
+main {
+    min-height: 100vh;
+}
+
+footer {
+    border-top: 2px solid white;
+}
+
+p {
+    margin: 0;
+}
+
+#tabla-usuarios tbody tr td img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+#tabla-usuarios {
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 15px;
+    border: 3px solid white;
+}
+
+#tabla-usuarios thead tr th:first-child {
+    border-top-left-radius: 15px;
+}
+
+#tabla-usuarios thead tr th:last-child {
+    border-top-right-radius: 15px;
+}
+
+#tabla-usuarios tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+#tabla-usuarios tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+.boton-editar a {
+    text-decoration: none !important;
+}
