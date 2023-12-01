@@ -13,7 +13,7 @@ export function FormularioUsuario() {
         </div>
         <div class="mb-3">
             <label class="form-label" for="user">Usuario</label>
-            <input class="form-control" id="user" titulo="No puede estar vacio"  required value="${usuario.usuario ? usuario.usuario : ""}">
+            <input class="form-control" id="user" title="No puede estar vacio"  required value="${usuario.usuario ? usuario.usuario : ""}">
         </div>
         <div class="mb-3">
             <label class="form-label" for="email">Email</label>
