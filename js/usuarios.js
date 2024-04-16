@@ -11,7 +11,7 @@ const App = Vue.createApp({
     data() {
         return {
             usuarios: [],
-            url: "https://fabrizio112.pythonanywhere.com/users",
+            url: "http://localhost:5000/users",
             error: false,
             loading: true,
             usuarioSeleccionado: initialUserForm
